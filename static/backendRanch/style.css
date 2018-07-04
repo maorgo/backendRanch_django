@@ -1,8 +1,17 @@
 body {
-  text-align: center;
-  font-family: Arial, monospace;
+    font-family: Arial, monospace;
     font-size: large;
     color: darkslategray;
+    background-color: #F1F1F1;
+}
+
+a.title {
+    color: #47569B;
+    font-size: 25px;
+}
+
+a.title:hover {
+    text-decoration: underline;
 }
 
 a.logo:hover {
@@ -10,7 +19,7 @@ a.logo:hover {
 }
 
 a {
-    color: white;
+    color: darkslategray;
     text-decoration-color: white;
 }
 
@@ -27,44 +36,93 @@ a:hover {
 }
 
 
-div.nav {
-  text-align: left;
-  float: left;
-  padding-left: 3%;
-  max-width: 10%;
-  margin: auto;
-}
-
-div.content {
-  float: left;
-  padding-left: 5%;
-  max-width: 90%;
-  margin: auto;
-}
-
 p {
     align-content: center;
     padding: 1%;
-    border: 1px solid #527676;
-    border-radius: 7px;
+
 }
 
 p.post {
+  padding-left: 4%;
   text-align: left;
+}
+
+span.post_title {
+    color: #47569B;
+    font-size: 25px;
+}
+
+p.post_preview {
+    padding: 0%;
+}
+
+p.post_preview:hover {
+  cursor: pointer ;
+}
+
+div.post_preview {
+    text-align: left;
     width: 65%;
+    padding-left: 4%;
+}
+
+div.categories {
+    padding-left: 5%;
+    width: 20%;
+    margin-left: 15%;
+    float:right;
+}
+
+p.categories {
+    width: 100%;
+    border: 1px;
+}
+
+p.categories:hover {
+    cursor: pointer;
+    color: black;
 }
 
 div.header {
-    padding: 0.5%;
-    text-align: left;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 8%;
-    background-color: darkslategray;
-    color: white;
+    width: 70%;
+    padding-left:13%;
+    padding-top: 3%;
+    color: darkslategray;
 }
 
 div.centerDiv {
-    padding-top: 7%;
+    background-color: white;
+    padding: 1%;
+    margin: auto;
+    box-shadow:1px 1px 3px grey;
+}
+
+div.headerLogo {
+    height: 20%;
+    background-color: white;
+    padding: 1%;
+    font-size:28px;
+    text-align:left;
+    box-shadow:1px 1px 3px grey;
+}
+
+div.headerNav {
+    background-color: white;
+    color: darkslategray;
+    padding: 1%;
+    font-size: 20px;
+    text-align:left;
+    box-shadow:1px 1px 3px grey;
+}
+
+ul li{
+  display: inline;
+  margin: 0 0 30px 0;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }

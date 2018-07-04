@@ -1,0 +1,22 @@
+{% extends "layout2.html" %}
+{% block content %}
+
+        {% if main_content is None %}
+          <div>
+            Error: No posts could be found.
+          </div>
+        {%  else %}
+          <div class="post_preview">
+          {%  for post in main_content %}
+              <p class='post_preview' onclick="getPost('{{ post.slug }}')">
+                  <a href="/posts/{{post.slug}}" class="title">{{ post.title }}</a>
+              </p>
+                  {{  post.introduction }} <br><br>
+This entry was posted at <b>{{  post.created_on }}</b> regarding <a href="/tags/{{post.tag}}"><b>{{post.tag}}</b></a><br><br>
+              </p>
+              <hr>
+          {%  endfor %}
+          </div>
+          {% endif %}
+    </div>
+{% endblock %}

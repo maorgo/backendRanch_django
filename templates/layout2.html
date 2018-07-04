@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Backend Ranch</title>
+    {% load static %}
+    <link rel="stylesheet" href='{% static "backendRanch/style.css" %}'>
+    <script src='{% static "backendRanch/main.js" %}'></script>
+</head>
+<body>
+    <div class="header">
+        <div class="headerLogo">
+            <a href="/"><b>BackendRanch - A programming blog</b></a>
+        </div>
+        <div class="headerNav">
+            <ul>
+                <li><a href="/">Home</a></li>&nbsp;&nbsp;&nbsp;
+                <li><a href="/posts">Posts</a></li>&nbsp;&nbsp;&nbsp;
+                <li><a href="/about">About Me</a></li>
+            </ul>
+        </div>
+        <div class="centerDiv">
+            <div>
+                <div class="categories">
+                    <p><b>Quick Categories</b></p>
+                    <p class="categories"><u><a href="/tags/python">Python</a></u></p>
+                    <p class="categories"><u><a href="/tags/java">Java</a></u></p>
+                    <p class="categories"><u><a href="/tags/machine%20learning">Machine Learning</a></u></p>
+                </div>
+                {% block content %} {% endblock %}
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

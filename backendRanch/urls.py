@@ -22,5 +22,7 @@ from . import views
 urlpatterns = [
     path('', views.return_index),
     path('admin/', admin.site.urls),
-    path('posts/', include('posts.urls'))
+    path('posts/', include('posts.urls')),
+    path('about', views.about),
+    path('tags/<tag>', views.return_posts_by_tag)
 ]
