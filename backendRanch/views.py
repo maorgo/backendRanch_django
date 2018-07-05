@@ -28,7 +28,7 @@ def return_posts_by_tag(request, tag):
             break
     if not found:
         return HttpResponse(status=501)
-    p = Post.objects.all().filter(tag__name__in=inner_tags).order_by('-created_on')
+    p = Post.objects.all().filter(tags__name__in=inner_tags).order_by('-created_on')
 
     context = {'main_content': p}
     return render(request, 'posts.html', context=context)
