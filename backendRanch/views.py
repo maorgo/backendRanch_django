@@ -21,14 +21,7 @@ def return_posts_by_tag(request, tag):
     found = False
     # todo: instead of query, query it once at server startup and store it in cache
     inner_tags = Tag.objects.all()
-    for _tag in inner_tags:
-        if tag == _tag.name.lower():
-            found = True
-            tag = _tag.name
-            break
-    if not found:
-        return HttpResponse(status=501)
-    p = Post.objects.all().filter(tags__name__in=inner_tags).order_by('-created_on')
+    p = Post.objects.all().filter(tags__name__in=tag).order_by('-created_on')
 
     context = {'main_content': p}
     return render(request, 'posts.html', context=context)
