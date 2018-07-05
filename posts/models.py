@@ -1,6 +1,8 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 
+class Tag(models.Model):
+    name = models.CharField(max_length=150)
 
 class Post(models.Model):
     title = models.CharField(max_length=130)
@@ -13,7 +15,3 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)
-
-
-class Tag(models.Model):
-    name = models.CharField(max_length=150)
