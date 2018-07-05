@@ -1,7 +1,6 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
-from posts.models import Post, Tag
+from posts.models import Post
 
 
 def return_index(request):

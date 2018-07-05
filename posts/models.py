@@ -2,9 +2,6 @@ from django.db import models
 from django.template.defaultfilters import slugify
 from taggit.managers import TaggableManager
 
-class Tag(models.Model):
-    name = models.CharField(max_length=150)
-
 
 class Post(models.Model):
     title = models.CharField(max_length=130)
