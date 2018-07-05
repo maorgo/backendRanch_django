@@ -26,7 +26,8 @@ SECRET_KEY = 'p0$m7#7t_7g$*mpk0xj7$uvxyf3!*+q)=c17k7b9v8!ck-t!we'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'backendranch-django.herokuapp.com'
+    'backendranch-django.herokuapp.com',
+    '127.0.0.1'
 ]
 
 
@@ -123,7 +124,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static/backendRanch')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
