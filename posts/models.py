@@ -6,8 +6,8 @@ class Post(models.Model):
     title = models.CharField(max_length=130)
     introduction = models.TextField(max_length=300)
     content = models.TextField(max_length=99999)
-    slug = models.SlugField(max_length=150, unique=True, default='')
-    tag = models.CharField(max_length=40)
+    slug = models.SlugField(max_length=150, default='')
+    tags = models.ManyToManyField(Tag)
     created_on = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
