@@ -1,1 +1,1 @@
-web: gunicorn run_server:app
+web: gunicorn backendRanch.wsgi:application --log-file -
