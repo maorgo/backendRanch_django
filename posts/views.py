@@ -20,3 +20,4 @@ def get_post(request, slug):
     context = {'post': requested_post,
                'tags': tags}
     return render(request, 'post.html', context=context)
+#
