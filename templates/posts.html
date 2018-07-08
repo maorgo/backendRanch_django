@@ -12,7 +12,14 @@
                   <a href="/posts/{{post.slug}}" class="title">{{ post.title }}</a>
               </p>
                   {{  post.introduction }} <br><br>
-This entry was posted at <b>{{  post.created_on }}</b> regarding <a href="/tags/{{post.tag}}"><b>{{post.tag}}</b></a><br><br>
+This entry was posted at <b>{{  post.created_on }}</b> regarding
+              {% for tag in tags[:-1] %}
+              <a href="/tags/{{post.tag}}"><b>{{tag}}</b></a>
+                {% if not loop.last %}
+                    ,
+                {% endif %}
+              {% endfor %}
+              <br><br>
               </p>
               <hr>
           {%  endfor %}
