@@ -5,6 +5,9 @@
           <p class='post'>
               <span class="post_title">{{ post.title }}</span><br><br>
               {{  post.content }} <br><br><br>
-              This entry was posted at <b>{{  post.created_on }}</b> regarding <a href="/tags/{{post.tag}}"><b>{{tags}}</b></a><br><br>
+              This entry was posted at <b>{{  post.created_on }}</b> regarding
+              {% for tag in tags %}
+              <a href="/tags/{{post.tag}}"><b>{{tag}}</b></a><br><br>
+              {% endfor %}
           </p>
 {% endblock %}
