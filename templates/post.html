@@ -6,9 +6,10 @@
               <span class="post_title">{{ post.title }}</span><br><br>
               {{  post.content }} <br><br><br>
               This entry was posted at <b>{{  post.created_on }}</b> regarding
-              {% for tag in tags %}
+              {% for tag in tags[:-1] %}
               <a href="/tags/{{post.tag}}"><b>{{tag}}</b></a>,
               {% endfor %}
+              <a href="/tags/{{post.tag}}"><b>{{tags[-1}}</b></a>
               <br><br>
           </p>
 {% endblock %}
