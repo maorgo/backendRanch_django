@@ -13,7 +13,7 @@
               </p>
                   {{  post.introduction }} <br><br>
 This entry was posted at <b>{{  post.created_on }}</b> regarding
-              {% for tag in tags[:-1] %}
+              {% for tag in tags %}
               <a href="/tags/{{post.tag}}"><b>{{tag}}</b></a>
                 {% if not loop.last %}
                     ,
