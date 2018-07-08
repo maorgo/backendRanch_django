@@ -16,7 +16,6 @@ def posts(request):
 def get_post(request, slug):
     # Get a specific post by it's slug (made out of the title)
     requested_post = Post.objects.get(slug=slug)
-    tags = requested_post.tags.names()
-    context = {'post': requested_post,
-               'tags': tags}
+
+    context = {'post': requested_post}
     return render(request, 'post.html', context=context)
