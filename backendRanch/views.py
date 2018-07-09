@@ -10,11 +10,13 @@ def return_index(request):
     all_posts = Post.objects.all().order_by('-created_on')[:5]
     context = {'main_content': all_posts,
                'tags': TAGS}
+    print(TAGS)
     return render(request, 'posts.html', context=context)
 
 
 def about(request):
     context = {'tags': TAGS}
+    print(TAGS)
     return render(request, 'about.html', context=context)
 
 
@@ -23,4 +25,5 @@ def return_posts_by_tag(request, tag):
     p = Post.objects.filter(tags__name__in=[tag]).order_by('-created_on')
     context = {'main_content': p,
                'tags': TAGS}
+    print(TAGS)
     return render(request, 'posts.html', context=context)

@@ -12,6 +12,7 @@ def posts(request):
     all_posts = Post.objects.all().order_by('-created_on')
     context = {'main_content': all_posts,
                'tags': TAGS}
+    print(TAGS)
     return render(request, 'posts.html', context=context)
 
 
@@ -20,5 +21,6 @@ def get_post(request, slug):
     requested_post = Post.objects.get(slug=slug)
     context = {'post': requested_post,
                'tags': TAGS}
+    print(TAGS)
     return render(request, 'post.html', context=context)
 #
