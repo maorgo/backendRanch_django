@@ -6,7 +6,7 @@
               <span class="post_title">{{ post.title }}</span><br><br>
               {{  post.content }} <br><br><br>
               This entry was posted at <b>{{  post.created_on }}</b> regarding
-              {% for tag in tags %}
+              {% for tag in post.tags.names %}
               <a href="/tags/{{tag}}"><b>{{tag}}</b></a>
 
               {% endfor %}

@@ -20,7 +20,6 @@ def about(request):
 
 def return_posts_by_tag(request, tag):
     # Get all posts belonging to a specific tag
-    # todo: instead of query, query it once at server startup and store it in cache
     p = Post.objects.filter(tags__name__in=[tag]).order_by('-created_on')
     context = {'main_content': p,
                'tags': TAGS}
