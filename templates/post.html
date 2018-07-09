@@ -5,7 +5,8 @@
           <p class='post'>
               <span class="post_title">{{ post.title }}</span><br><br>
               {% autoescape off %}
-              <b> {{ post.introduction }}</b>
+              {{ post.introduction }}
+              <br><br><br>
               {{  post.content }} <br><br><br>
               {% endautoescape %}
               This entry was posted at <b>{{  post.created_on }}</b> regarding
