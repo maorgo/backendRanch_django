@@ -6,13 +6,13 @@
           </div>
         {%  else %}
           <div class="post_preview">
-          {%  for post, tags in main_content.items %}
+          {%  for post in main_content %}
               <p class='post_preview' onclick="getPost('{{ post.slug }}')">
                   <a href="/posts/{{post.slug}}" class="title">{{ post.title }}</a>
               </p>
                   {{  post.introduction }} <br><br>
 This entry was posted at <b>{{  post.created_on }}</b> regarding
-              {% for tag in tags %}
+              {% for tag in post.tags.names %}
               <a href="/tags/{{tag}}"><b>{{tag}}</b></a>
               {% endfor %}
               <br><br>
