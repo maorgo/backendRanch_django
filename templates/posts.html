@@ -7,7 +7,7 @@
           </div>
         {%  else %}
           <div class="post_preview">
-          {%  for post, tags in main_content %}
+          {%  for post, tags in main_content.items() %}
               <p class='post_preview' onclick="getPost('{{ post.slug }}')">
                   <a href="/posts/{{post.slug}}" class="title">{{ post.title }}</a>
               </p>
