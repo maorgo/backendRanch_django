@@ -23,9 +23,12 @@
             <div>
                 <div class="categories">
                     <p><b>Quick Categories</b></p>
-                    <p class="categories"><u><a href="/tags/python">Python</a></u></p>
-                    <p class="categories"><u><a href="/tags/java">Java</a></u></p>
-                    <p class="categories"><u><a href="/tags/machine%20learning">Machine Learning</a></u></p>
+                    {% for tag in tags %}
+                    <p class="categories"><u><a href="/tags/{{ tag }}">{{ tag }}</a></u></p>
+                    <!--<p class="categories"><u><a href="/tags/Python">Python</a></u></p>-->
+                    <!--<p class="categories"><u><a href="/tags/Java">Java</a></u></p>-->
+                    <!--<p class="categories"><u><a href="/tags/machine%20learning">Machine Learning</a></u></p>-->
+                    {% endfor %}
                 </div>
                 {% block content %} {% endblock %}
 
