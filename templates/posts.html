@@ -1,13 +1,12 @@
 {% extends "layout2.html" %}
 {% block content %}
-
         {% if main_content is None %}
           <div>
             Error: No posts could be found.
           </div>
         {%  else %}
           <div class="post_preview">
-          {%  for post, tags in main_content.items() %}
+          {%  for post, tags in main_content.items %}
               <p class='post_preview' onclick="getPost('{{ post.slug }}')">
                   <a href="/posts/{{post.slug}}" class="title">{{ post.title }}</a>
               </p>
