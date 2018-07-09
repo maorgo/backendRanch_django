@@ -8,8 +8,11 @@ def index(request):
 
 def posts(request):
     # Get all posts ordered by date descending
+    posts_with_tags = {}
     all_posts = Post.objects.all().order_by('-created_on')
-    context = {'main_content': all_posts}
+    for post in all_posts:
+        posts_with_tags.update({post: post.tags.names()})
+    context = {'main_content': posts_with_tags}
     return render(request, 'posts.html', context=context)
 
 
