@@ -45,6 +45,7 @@ p {
 p.post {
   padding-left: 4%;
   text-align: left;
+  width: 70%;
 }
 
 span.post_title {
