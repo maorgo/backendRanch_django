@@ -138,3 +138,13 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 TAGGIT_CASE_INSENSITIVE = True
+
+CKEDITOR_CONFIGS = {
+    'special': {
+        'toolbar': 'Special',
+        'toolbar_Special': [
+            ['Bold'], ['CodeSnippet'], # < here
+        ],
+        'extraPlugins': 'codesnippet', # < here
+    }
+}
